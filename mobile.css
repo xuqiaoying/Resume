@@ -1,0 +1,134 @@
+body {
+    width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.intro{
+    height: 100%;
+    position: relative;
+    /*overflow: hidden;*/
+}
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.header {
+    background: #444;
+}
+.header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+.header li:nth-child(1) {
+    font-size: 26px;
+    color: #ccc;
+}
+.header .fa {
+    font-size: 28px;
+    color: #ccc;
+}
+.main {
+    flex: 1;
+    padding: 30px;
+    position: relative;
+}
+.main>div {
+    border-bottom: 1px solid #ccc;
+    transition: .3s;
+    position: relative;
+}
+.main>div::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    background: #333;
+    transition: .3s;
+    display: block;
+    left: 0;
+    z-index: 99;
+}
+.main>div:hover::after {
+    height: 3px;
+}
+.main>div ul li {
+    padding: 10px 0;
+}
+.content ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer {
+    background: #444;
+}
+.footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px;
+}
+.footer .fa,.footer ul li {
+    color: #ccc;
+}
+.footer ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer ul li:hover {
+    color: #999;
+}
+.footer .fa:hover {
+    color: #999;
+}
+
+.edit {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transition: .3s;
+    transform: translateY(-100%);
+    z-index: 99;
+    background: #fcfcfc;
+}
+
+.edit.show {
+    transform: translateY(0);
+}
+.introduce {
+    padding: 10px;
+}
+.introduce img{
+    width:170px;
+    height: 170px;
+    border-radius: 50%;
+}
+.introduce p{
+    font-size: 20px;
+}
+.introduce .light{
+    color: #E91E63;
+}
