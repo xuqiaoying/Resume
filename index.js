@@ -1,28 +1,37 @@
 function resume(){
     let $intro = document.querySelector('.intro');
-    let $one = $intro.querySelector('.viewOne');
-    let $two = $intro.querySelector('viewTwo');
-    let $demo = $intro.querySelector('.demo');
-    let $four = $intro.querySelector('viewFour');
-    let $edit = $intro.querySelector('.edit');
+    let $editOne = $intro.querySelector('.editOne');
+    let $editTwo = $intro.querySelector('.editTwo');
+    let $editDemo = $intro.querySelector('.editDemo');
+    let $editFour = $intro.querySelector('.editFour');
+    let $editFive = $intro.querySelector('.editFive');
 
     $intro.addEventListener('click',function(event){
         let target = event.target;
         switch(true){
             case target.matches('.viewOne'):
-                $edit.classList.add('show');
+                $editOne.classList.add('show');
                 break;
             case target.matches('.viewTwo'):
-                $edit.classList.add('show');
+                $editTwo.classList.add('show');
                 break;
             case target.matches('.demo'):
-                $edit.classList.add('show');
+                $editDemo.classList.add('show');
                 break;
             case target.matches('.viewFour'):
-                $edit.classList.add('show');
+                $editFour.classList.add('show');
                 break;
-            case target.matches('.fa-arrow-left'):
-                $edit.classList.remove('show');
+            case target.matches('.viewFive'):
+                $editFive.classList.add('show');
+                break;
+            case target.matches('.fa-arrow-left'):console.log(target);
+                $editOne.classList.remove('show');
+                $editTwo.classList.remove('show');
+                $editDemo.classList.remove('show');
+                $editFour.classList.remove('show');
+                $editFive.classList.remove('show');
+                break;
+            default:
                 break;
         }
     })
